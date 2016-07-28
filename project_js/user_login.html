@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<section class="container">
+		    <div class="login">
+		      <h1>用户登录</h1>
+		      <form action="doPost.php" method="post" onsubmit="return check()">
+		        <p><input type="text" name="login" value="" id='username' placeholder="手机或邮箱"></p>
+		        <p><input type="password" name="password" id='password' value="" placeholder="密码"></p>		
+		        <p class="submit"><input type="submit" name="commit" value='登录'></p>
+		     
+		      </form>
+		    </div>
+		
+		  </section>
+		
+		<script type="text/javascript">
+			function check(){
+				var username=document.getElementById("username").value;
+				var password=document.getElementById('password').value;
+				var myreg1 = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; //手机号正则
+//				var myreg2= /[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}/; //邮箱正则
+//				if(!((myreg1.test(username) || (myreg2.test(username))){
+//					alert('无效的用户名');
+//					return false;
+//				}
+				if(!(myreg1.test(username))){
+					alert('无效的用户名');
+					return false;
+				}
+//				if(!(myreg2.test(username)){
+//					alert('无效的用户名');
+//					return false;					
+//				}
+				 
+				var len = /[\s\S]{6,10}/; //长度为6-10位
+   				if(!(len.test(password))){
+				alert("无效的密码");
+				return false;  					
+   				}
+
+			return true;			
+					
+			}				
+			
+		</script>
+	</body>
+</html>

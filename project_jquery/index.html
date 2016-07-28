@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery图片轮播</title>
+<link href="public/css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
+<script src="public/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="public/js/jquery.slideBox.js" type="text/javascript"></script>
+<script>
+jQuery(function($){
+	$('#demo1').slideBox();
+});
+</script>
+</head>
+
+<body>
+<h3>左右轮播，滚动延迟5秒，滚动效果swing，初始焦点第0张，鼠标悬停在图片停止轮播,移开继续轮播</h3>
+<div id="demo1" class="slideBox">
+  <ul class="items">
+    <li><img src="public/img/0.jpg"></li>
+    <li><img src="public/img/1.jpg"></li>
+    <li><img src="public/img/2.jpg"></li>
+    <li><img src="public/img/3.jpg"></li>
+    <li><img src="public/img/4.jpg"></li>
+    <li><img src="public/img/5.jpg"></li>
+    <li><img src="public/img/6.jpg"></li>
+    <li><img src="public/img/7.jpg"></li>
+    <li><img src="public/img/8.jpg"></li>
+    <li><img src="public/img/9.jpg"></li>
+  </ul>
+</div>
+
+</body>
+</html>
